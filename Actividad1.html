@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      body{
+        font-family: Arial, sans-serif;
+        margin: 10;
+        padding: 10;
+        background-color: #000000;
+        color: #ffffff;
+        text-align: center;
+
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('fondo.jpg') no-repeat center center;
+            background-size: cover;
+            cursor: pointer;
+            z-index: 9999;
+        }
+        .real-content {
+            display: none;
+        }
+    video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+        .gif-container img {
+            width: 500px;  
+            height: auto; 
+        }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+    </style>
+     <script>
+        function hideSplashScreen() {
+            document.querySelector('.splash-screen').style.display = 'none';
+            document.querySelector('.real-content').style.display = 'block';
+        }
+    </script>
+
+</head>
+<body>
+    
+    <div class="splash-screen" onclick="hideSplashScreen()"></div>
+    <div class="real-content">
+    
+        <div class="video-container">
+            <video src="VIDEO_1.MP4" autoplay muted></video>
+
+        </div>
+            
+          </video>
+        <h1> Audio </h1>
+        <audio controls>
+            <source src="MUSICA.mp3" type="audio/mp3">
+          </audio>
+    
+          <div class="gif-container">
+            <img src="GIF1.gif" alt="GIF Ejemplo">
+        </div>
+    
+    
+        <footer>
+            <p>&copy; 2024 Autor de la página. Todos los derechos reservados.</p>
+            <p>Creado por <strong>Jheferson Kevin Vargas</strong></p>
+          </footer>
+    </div> 
+    
+</body>
+</html>
